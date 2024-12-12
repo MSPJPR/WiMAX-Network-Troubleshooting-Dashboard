@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WiMAX Network Troubleshooting Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>WiMAX Network Troubleshooting and Optimization</h1>
+    <div class="container">
+        <div>
+            <label for="modulation">Select Modulation Scheme:</label>
+            <select id="modulation">
+                <option value="qpsk">QPSK</option>
+                <option value="16qam">16-QAM</option>
+                <option value="64qam">64-QAM</option>
+            </select>
+        </div>
+        <div>
+            <label for="band">Select Frequency Band:</label>
+            <select id="band">
+                <option value="2.3">2.3 GHz</option>
+                <option value="2.5">2.5 GHz</option>
+                <option value="3.5">3.5 GHz</option>
+            </select>
+        </div>
+        <button onclick="diagnoseNetwork()">Run Diagnostics</button>
+        <button onclick="saveConfiguration()">Save Configuration</button>
+        <button onclick="loadConfiguration()">Load Configuration</button>
+        <div id="result"></div>
+        <canvas id="metricsChart" width="400" height="200"></canvas>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
